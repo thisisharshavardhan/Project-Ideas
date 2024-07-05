@@ -1,7 +1,7 @@
 import './Login.css'
 import google_logo from '../../Assets/google_logo.svg'
 import github_logo from '../../Assets/github_logo.svg'
-
+import { Link } from 'react-router-dom'
 function Login() {
     return (
         <>
@@ -30,8 +30,8 @@ function Login() {
                     </div>
                 </div>
                 <div className="login_footer">
-                    <p className='dont_have_account'>Don&apos;t have an account? <a href='#'>Register</a></p>
-                    <p className='forgot_password'><a href='#'>Forgot Password?</a></p>
+                    <p className='dont_have_account'>Don&apos;t have an account? <Link to='/register'>Register</Link></p>
+                    <p className='forgot_password'><Link to='/forgotpassword'>Forgot Password?</Link></p>
                 </div>
             </div>
         </>
