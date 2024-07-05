@@ -1,0 +1,30 @@
+{
+  "name": "projectideas",
+  "version": "1.0.0",
+  "description": "This website is designed to provide you with a collection of creative and innovative project ideas for your next development endeavor. Whether you are a beginner or an experienced developer, this website aims to inspire and guide you in finding exciting projects to work on.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+  },
+  "keywords": [
+    "projectideas",
+    "project",
+    "ideas",
+    "top",
+    "projects",
+    "bestprojects",
+    "best",
+    "projects",
+    "in",
+    "cse",
+    "Computers"
+  ],
+  "author": "Harshavardhan",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.4",
+    "nodemon": "^3.1.4"
+  }
+}
