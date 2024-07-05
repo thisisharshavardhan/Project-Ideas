@@ -64,6 +64,11 @@
     margin-top: 20px;
     color: #fcfdd5;
 }
+.forgot_password{
+    margin-left: 5vw;
+    margin-top: 20px;
+    color: #fcfdd5;
+}
 .social_login{
     display: flex;
     justify-content: center;
