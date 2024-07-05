@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://thisisharshavardhan.github.io/Project_Ideas_deploy",
+  "homepage": "https://projectideas.harshavardhan.tech/Project-Ideas",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",

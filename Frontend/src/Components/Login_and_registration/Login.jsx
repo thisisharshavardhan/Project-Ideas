@@ -31,6 +31,7 @@ function Login() {
                 </div>
                 <div className="login_footer">
                     <p className='dont_have_account'>Don&apos;t have an account? <a href='#'>Register</a></p>
+                    <p className='forgot_password'><a href='#'>Forgot Password?</a></p>
                 </div>
             </div>
         </>
