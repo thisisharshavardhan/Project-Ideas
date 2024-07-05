@@ -8,6 +8,15 @@
     <script type="module" crossorigin src="/assets/index-C3xgPoIl.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DLQPiBDe.css">
   </head>
+  <script>
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect.split('/').slice(3).join('/'));
+      }
+    })();
+  </script>
   <body>
     <div id="root"></div>
   </body>
