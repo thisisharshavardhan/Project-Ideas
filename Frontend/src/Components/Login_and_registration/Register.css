@@ -1,21 +1,21 @@
-.login_outer_div{
+.register_outer_div{
     display: flex;
     flex-direction: column;
     justify-content: center;    
     margin-top: 10vh;
     padding: 20px;
 }
-.login_title{
+.register_title{
     font-size: 30px;
     font-weight: 600;
     color: #fafcec;
     margin-left: 5vw;
     margin-bottom: 20px;
 }
-.login_title h4{
+.register_title h4{
     color: #d5d903;
 }
-.login_input_div{
+.register_input_div{
     display: flex;
     flex-direction: column;
     margin-left: 5vw;
@@ -23,25 +23,25 @@
     margin-bottom: 20px;
 }
 
-.login_label{
+.register_label{
     font-size: 20px;
     color: #fcfdd5;
     margin-bottom: 10px;
 }
 
-.login_input{
+.register_input{
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #d3c100;
     outline:#d3c100;
 }
-.login_input:focus{
+.register_input:focus{
     border: 1px solid #f8ab05;
     transition: 0.1s;
 }
 
-.login_button{
+.register_button{
     margin-left: 5vw;
     margin-top: 20px;
     padding: 10px;
@@ -52,11 +52,11 @@
     border-radius: 5px;
     cursor: pointer;
 }
-.login_button:hover{
+.register_button:hover{
     background-color: #f7c559;
     transition: 0.1s;
 }
-.dont_have_account{
+.already_have_account{
     margin-left: 5vw;
     margin-top: 20px;
     color: #fcfdd5;
@@ -66,14 +66,14 @@
     margin-top: 20px;
     color: #fcfdd5;
 }
-.social_login{
+.social_register{
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-left: 5vw;
     margin-right: 5vw;
 }
-.social_login p{
+.social_register p{
     color: #fcfdd5;
     font-size: large;
     margin-left: 10px;
@@ -112,4 +112,3 @@
     width: 50px;
     margin: 2px;
 }
-
