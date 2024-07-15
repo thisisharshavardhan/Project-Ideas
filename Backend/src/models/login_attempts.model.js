@@ -5,17 +5,17 @@ const loginAttemptsSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    Attempts:[
+    Attempts: [
         {
-            time:{
-            type: Date,
-            default: Date.now,
+            time: {
+                type: Date,
+                default: Date.now,
             },
-            success:{
+            success: {
                 type: Boolean,
                 default: false,
             },
-            userAgent:{
+            userAgent: {
                 type: String,
             },
         }

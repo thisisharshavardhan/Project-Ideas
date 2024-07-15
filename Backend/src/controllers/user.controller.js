@@ -5,10 +5,10 @@ import {User} from '../models/user.model.js'
 
 const registerUser = asyncHandler(async(req,res)=>{
 
-  const {email,password} = req.body;
+  const {email,password,username} = req.body;
 
-    if(!email || !password){
-        throw new ApiError(400,'Please provide email and password')
+    if(!email || !password || !username){
+        throw new ApiError(400,'Please provide email username and password')
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -19,6 +19,12 @@ const registerUser = asyncHandler(async(req,res)=>{
 
     if (password.length < 6) {
         throw new ApiError(400, 'Password must be at least 6 characters')
+    }
+
+    usernameExists = await User.findOne({username})
+    
+    if (usernameExists) {
+        throw new ApiError(400, 'User with username '+username+' already exists')
     }
     
     const userExists = await User.findOne({email})

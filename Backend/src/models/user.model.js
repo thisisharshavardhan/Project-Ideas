@@ -60,7 +60,7 @@ const userSchema = new mongoose.Schema({
     },
     social: {
         linkedin: {
-            type: String
+            type: String,
         },
         github: {
             type: String
@@ -90,10 +90,10 @@ const userSchema = new mongoose.Schema({
     refreshToken: {
         type: String
     },
-    loginAttempts:[{
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'LoginAttempt'
-        }],
+    loginAttempts: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'LoginAttempt'
+    }],
 
 }, { timestamps: true });
 
