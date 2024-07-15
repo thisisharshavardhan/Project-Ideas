@@ -21,7 +21,7 @@ const registerUser = asyncHandler(async(req,res)=>{
         throw new ApiError(400, 'Password must be at least 6 characters')
     }
 
-    usernameExists = await User.findOne({username})
+    let usernameExists = await User.findOne({username})
     
     if (usernameExists) {
         throw new ApiError(400, 'User with username '+username+' already exists')
