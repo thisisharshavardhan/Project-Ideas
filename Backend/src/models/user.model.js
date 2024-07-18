@@ -7,7 +7,6 @@ const userSchema = new mongoose.Schema({
         unique: true,
         lowercase: true,
         trim: true,
-        default: Math.random().toString(36).substring(7)
     },
     password: {
         type: String,

@@ -12,7 +12,7 @@
     margin-left: 5vw;
     margin-bottom: 20px;
 }
-.register_title h4{
+.register_title p{
     color: #d5d903;
 }
 .register_input_div{
@@ -60,11 +60,13 @@
     margin-left: 5vw;
     margin-top: 20px;
     color: #fcfdd5;
+    font-weight: 100;
 }
 .forgot_password{
     margin-left: 5vw;
     margin-top: 20px;
     color: #fcfdd5;
+    
 }
 .social_register{
     display: flex;

@@ -5,10 +5,11 @@ import {User} from '../models/user.model.js'
 
 const registerUser = asyncHandler(async(req,res)=>{
 
-  const {email,password,username} = req.body;
-
-    if(!email || !password || !username){
-        throw new ApiError(400,'Please provide email username and password')
+  const {email,password,username,name,gender} = req.body;
+  
+    console.log(email,password,username,name,gender);
+    if(!email || !password || !username || !name || !gender){
+        throw new ApiError(400,'Please provide email, username, fullname, gender and password')
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -34,10 +35,13 @@ const registerUser = asyncHandler(async(req,res)=>{
 
     const user = await User({
         email,
-        password
+        password,
+        username,
+        name,
+        gender
     }).save({validateBeforeSave:false})
 
-    res.send(new ApiResponse(201,{username:user.username,email:user.email}))
+    res.send(new ApiResponse(201,{username:user.username,email:user.email,name:user.name,gender:user.gender}))
 })
 
 const loginUser = asyncHandler(async(req,res)=>{
