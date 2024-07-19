@@ -42,7 +42,11 @@
     border: 1px solid #f8ab05;
     transition: 0.1s;
 }
-
+.error_msg{
+    color: #ff0000;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
 .login_button{
     margin-top: 20px;
     margin-bottom: 10px;

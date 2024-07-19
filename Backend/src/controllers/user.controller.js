@@ -6,8 +6,6 @@ import {User} from '../models/user.model.js'
 const registerUser = asyncHandler(async(req,res)=>{
 
   const {email,password,username,name,gender} = req.body;
-  
-    console.log(email,password,username,name,gender);
     if(!email || !password || !username || !name || !gender){
         throw new ApiError(400,'Please provide email, username, fullname, gender and password')
     }
@@ -45,7 +43,44 @@ const registerUser = asyncHandler(async(req,res)=>{
 })
 
 const loginUser = asyncHandler(async(req,res)=>{
-        
+
+    const {username,email,password} = req.body;
+
+    if((!email && !password) || (!username && !password)){
+        throw new ApiError(400,'Please provide email and password')
+    }
+    
+    const user = await User.findOne({
+        $or: [{ email }, { username }]
+    })
+
+    if (!user) {
+        throw new ApiError(401, 'Invalid email or username')
+    }
+
+    const isPasswordCorrect = await user.comparePassword(password)
+
+    if (!isPasswordCorrect) {
+        throw new ApiError(401, 'Invalid password')
+    }
+
+    const refreshToken = user.createRefreshToken()
+    const accessToken = user.createAccessToken()
+
+    const options = {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+    }
+
+    user.refreshToken = refreshToken
+    await user.save({ validateBeforeSave: false })
+
+    res.status(200)
+    .cookie('refreshToken', refreshToken, options)
+    .cookie('accessToken', accessToken, options)
+    .send(new ApiResponse(200, { accessToken }))
+
+
 })
 
 const logoutUser = asyncHandler(async(req,res)=>{

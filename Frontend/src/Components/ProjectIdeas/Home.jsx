@@ -4,8 +4,9 @@ function Home() {
   return (
     <>
       <h1>Home</h1>
-      <p>Welcome to the home page</p>
+      <p>You Logged In successfully</p>
       <Link to="/login">Login</Link>
+      <br />
       <Link to="/register">Register</Link>
     </>
   )
