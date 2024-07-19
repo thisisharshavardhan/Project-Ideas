@@ -1,59 +1,51 @@
-.register_outer_div{
+.login_outer_div{
     display: flex;
     flex-direction: column;
     justify-content: center;    
-    margin-top: 8vh;
+    margin-top: 10vh;
     padding: 20px;
-    margin-right: 25%;
-    margin-left: 25%;
 }
-.register_title{
+.login_title{
     font-size: 30px;
     font-weight: 600;
     color: #fafcec;
     margin-left: 5vw;
     margin-bottom: 20px;
 }
-.register_title p{
+.login_title h4{
     color: #d5d903;
 }
-.register_input_div{
+.login_input_div{
     display: flex;
     flex-direction: column;
     margin-left: 5vw;
     margin-right: 5vw;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.register_label{
+.login_label{
     font-size: 20px;
     color: #fcfdd5;
     margin-bottom: 10px;
 }
 
-.register_input{
+.login_input{
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #d3c100;
     outline:#d3c100;
 }
-.register_input:focus{
+.login_input:focus{
     border: 1px solid #f8ab05;
     transition: 0.1s;
 }
 
-.error_msg{
-    color: #ff0000;
-    margin-left: 5vw;
-    margin-right: 5vw;
+.login_button{
+    margin-top: 20px;
     margin-bottom: 10px;
-}
-
-.register_button{
-    margin-left: 5vw;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-right: auto;
+    margin-left: auto;
     padding: 10px;
     width: 200px;
     background-color: #d3c100;
@@ -61,33 +53,29 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
 }
-.register_button:hover{
+.login_button:hover{
     background-color: #f7c559;
     transition: 0.1s;
 }
-.already_have_account{
+.dont_have_account{
     margin-left: 5vw;
     margin-top: 20px;
     color: #fcfdd5;
-    font-weight: 100;
 }
 .forgot_password{
     margin-left: 5vw;
     margin-top: 20px;
     color: #fcfdd5;
-    
 }
-.social_register{
+.social_login{
     display: flex;
     justify-content: center;
     margin-top: 20px;
     margin-left: 5vw;
     margin-right: 5vw;
 }
-.social_register p{
+.social_login p{
     color: #fcfdd5;
     font-size: large;
     margin-left: 10px;
@@ -126,6 +114,4 @@
     width: 50px;
     margin: 2px;
 }
-
-
 

@@ -1,0 +1,126 @@
+    .register_outer_div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;    
+        margin-top: 2vh;
+        padding: 20px;
+    }
+    .register_title{
+        font-size: 30px;
+        font-weight: 600;
+        color: #fafcec;
+        margin-left: 5vw;
+        margin-bottom: 20px;
+    }
+    .register_title p{
+        color: #d5d903;
+    }
+    .register_input_div{
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-bottom: 10px;
+    }
+    
+    .register_label{
+        font-size: 20px;
+        color: #fcfdd5;
+        margin-bottom: 10px;
+    }
+    
+    .register_input{
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #d3c100;
+        outline:#d3c100;
+    }
+    .register_input:focus{
+        border: 1px solid #f8ab05;
+        transition: 0.1s;
+    }
+    
+    .error_msg{
+        color: #ff0000;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-bottom: 10px;
+    }
+
+    .register_button{
+        margin-left: 5vw;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 10px;
+        width: 200px;
+        background-color: #d3c100;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .register_button:hover{
+        background-color: #f7c559;
+        transition: 0.1s;
+    }
+    .already_have_account{
+        margin-left: 5vw;
+        margin-top: 20px;
+        color: #fcfdd5;
+        font-weight: 100;
+    }
+    .forgot_password{
+        margin-left: 5vw;
+        margin-top: 20px;
+        color: #fcfdd5;
+        
+    }
+    .social_register{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    .social_register p{
+        color: #fcfdd5;
+        font-size: large;
+        margin-left: 10px;
+    }
+    .with_google{
+        display: flex;
+        align-items: center;
+        border: 1px solid #474747;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 4px 12px;
+        cursor: pointer;
+    }
+    .with_google:hover{
+        border: 1px solid #fbff00;
+        transition: 200ms;
+    }
+    .with_google .google_logo{
+        width: 50px;
+        margin: 2px;
+    }
+    .with_github{
+        display: flex;
+        align-items: center;
+        border: 1px solid #474747;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 4px 12px;
+        cursor: pointer;
+    }
+    .with_github:hover{
+        border: 1px solid #fbff00;
+        transition: 200ms;
+    }
+    .with_github .github_logo{
+        width: 50px;
+        margin: 2px;
+    }

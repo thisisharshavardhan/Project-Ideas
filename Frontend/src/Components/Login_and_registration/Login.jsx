@@ -1,8 +1,17 @@
-import './Login.css'
+
 import google_logo from '../../Assets/google_logo.svg'
 import github_logo from '../../Assets/github_logo.svg'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 function Login() {
+    useEffect(() => {
+        if(window.innerWidth < 800){
+            import ('./LoginMobile.css')
+        }
+        else{
+            import ('./Login.css')
+        }
+    }, [])
     return (
         <>
             <div className="login_outer_div">
