@@ -1,0 +1,107 @@
+header{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar_items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navbar_items a{
+    text-decoration: none;
+    color: #fcfdd5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    margin-left: 20px;
+}
+
+.login_botton{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+}
+
+.login_botton:hover{
+    color:rgb(250, 243, 165);
+    transition: 0.1s;
+}
+
+.submit_idea_button{
+    background-color: #fff9ed28;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #fcf8f228;
+    text-decoration: none;
+}
+.submit_idea_button:hover{
+    background-color: #5d5d5d61;
+    color: rgb(250, 243, 165);
+    transition: 0.1s;
+}
+.website_Title{
+    cursor: pointer;
+}
+
+.navbar_below_header{
+    background-color: rgba(255, 255, 255, 0.146);
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap:wrap; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar_sub_categories_list{
+    
+    overflow: auto;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+}
+.navbar_sub_categories_list::-webkit-scrollbar{
+    height: 3px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.navbar_sub_categories_list::-webkit-scrollbar-thumb{
+    background: rgb(255, 0, 0);
+    border-radius: 10px;
+}
+
+
+.project_categories_name{
+    background-color: rgba(255, 255, 255, 0.146);
+    font-size: 17px;
+    text-decoration: none;
+    padding: 10px;
+    font-family: cursive;
+}
+
+.project_categories_name:hover{
+    background-color: rgba(255, 255, 255, 0.297);
+    transition: 0.1s;
+}
+
+.select_category{
+    background-color: rgba(255, 255, 255, 0.146);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.scroll_right{
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    margin-top: 0px;
+    height: 43.5px;
+    background-color: rgb(0, 0, 0);
+    border: none;
+}
