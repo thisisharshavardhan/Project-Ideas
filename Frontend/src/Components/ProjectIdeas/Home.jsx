@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 function Home() {
   useEffect(()=>{
   if(window.innerWidth < 768){
@@ -11,8 +11,6 @@ function Home() {
   }
   ,[])
   const scroll_categories = () => {
-    console.log('scrolling')
-    const scroll_right_button = document.querySelector('.scroll_right')
     const navbar_sub_categories_list = document.querySelector('.navbar_sub_categories_list')
     navbar_sub_categories_list.scrollBy({left: 100, behavior: 'smooth'})
     
@@ -22,7 +20,7 @@ function Home() {
     <header >
       <h1 className='website_Title'>ProjectIdeas</h1>
       <nav className='navbar_items'>
-      <NavLink className='login_botton'>login</NavLink>
+      <NavLink className='login_botton' to={'/login'}>login</NavLink>
       <NavLink className='submit_idea_button'>Submit an Idea</NavLink>
       </nav>
     </header>
@@ -74,6 +72,22 @@ function Home() {
       <button className='scroll_right' onClick={()=>{scroll_categories()}}> &gt;&gt; </button>
       </div>
     </nav>
+    <main>
+      <div className='project_card'>
+        <img className='project_image' src='https://images.unsplash.com/photo-1721332154191-ba5f1534266e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='Project Image'/>
+        <h2 className='project_title'>Project Title</h2>
+        <p className='project_description'>Project Description</p>
+        <div className='project_tags'>
+          <span className='project_tag'>Tag 1</span>
+          <span className='project_tag'>Tag 2</span>
+          <span className='project_tag'>Tag 3</span>
+        </div>
+        <div className='project_footer'>
+          <span className='project_category'>Category</span>
+          <span className='project_creator'>Creator</span>
+        </div>
+      </div>  
+    </main>
     </>
   )
 }

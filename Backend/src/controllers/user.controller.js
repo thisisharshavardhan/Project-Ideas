@@ -2,6 +2,7 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 import {ApiError} from '../utils/APIerror.js'
 import {ApiResponse} from '../utils/APIresponse.js'
 import {User} from '../models/user.model.js'
+import {LoginAttempt} from '../models/login_attempts.model.js'
 
 const registerUser = asyncHandler(async(req,res)=>{
 
@@ -37,7 +38,7 @@ const registerUser = asyncHandler(async(req,res)=>{
         username,
         name,
         gender
-    }).save({validateBeforeSave:false})
+    }).save()
 
     res.send(new ApiResponse(201,{username:user.username,email:user.email,name:user.name,gender:user.gender}))
 })
@@ -55,12 +56,32 @@ const loginUser = asyncHandler(async(req,res)=>{
     })
 
     if (!user) {
+        await LoginAttempt({
+            ip: req.ip,
+            Attempts: {
+                time: Date.now(),
+                success: false,
+                message: 'Invalid email or username',
+                userAgent: req.headers['user-agent']
+            }
+        }).save()
         throw new ApiError(401, 'Invalid email or username')
     }
 
     const isPasswordCorrect = await user.comparePassword(password)
 
     if (!isPasswordCorrect) {
+        const invalidUser = await new LoginAttempt({
+            ip: req.ip,
+            Attempts: {
+                time: Date.now(),
+                success: false,
+                message: 'Invalid password',
+                userAgent: req.headers['user-agent']
+            }
+        }).save()
+        user.loginAttempts.push(invalidUser._id)
+        await user.save()
         throw new ApiError(401, 'Invalid password')
     }
 
@@ -73,8 +94,17 @@ const loginUser = asyncHandler(async(req,res)=>{
     }
 
     user.refreshToken = refreshToken
-    await user.save({ validateBeforeSave: false })
+    await user.save()
 
+    await LoginAttempt.create({
+        ip: req.ip,
+        Attempts: {
+            time: Date.now(),
+            success: true,
+            message: 'Login successful',
+            userAgent: req.headers['user-agent']
+        }
+    })
     res.status(200)
     .cookie('refreshToken', refreshToken, options)
     .cookie('accessToken', accessToken, options)

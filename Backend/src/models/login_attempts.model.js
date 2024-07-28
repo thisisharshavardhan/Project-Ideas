@@ -5,22 +5,26 @@ const loginAttemptsSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    Attempts: [
-        {
-            time: {
-                type: Date,
-                default: Date.now,
-            },
-            success: {
-                type: Boolean,
-                default: false,
-            },
-            userAgent: {
-                type: String,
-            },
-        }
-    ],
+    Attempts:
+    {
+        time: {
+            type: Date,
+            default: Date.now,
+        },
+        success: {
+            type: Boolean,
+            default: false,
+        },
+        message: {
+            type: String,
+            required: true,
+        },
+        userAgent: {
+            type: String,
+        },
+    }
+
 
 });
 
-const LoginAttempt = mongoose.model("LoginAttempt", loginAttemptsSchema);
+export const LoginAttempt = mongoose.model("LoginAttempt", loginAttemptsSchema);

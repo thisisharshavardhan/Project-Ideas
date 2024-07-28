@@ -105,3 +105,30 @@ header{
     background-color: rgb(0, 0, 0);
     border: none;
 }
+
+.project_card{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project_image{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project_title{
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.project_description{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
