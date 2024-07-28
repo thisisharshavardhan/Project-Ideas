@@ -27,7 +27,15 @@ function Login() {
         formData.append('password',password)
         axios.post(import.meta.env.VITE_API_URL + '/login', formData)
         .then(res => {
-            window.location.href = '/'
+            if (res.data.data.accessToken && res.data.data.refreshToken) {
+                document.cookie = `accessToken=${res.data.data.accessToken}`
+                document.cookie = `refreshToken=${res.data.data.refreshToken}`
+                window.location.href = '/'
+            }
+            else{
+                document.querySelector('.error_msg').innerText = 'we are unable to Authenticate at this movement'
+            }
+            // window.location.href = '/'
         })
         .catch(err => {
             document.querySelector('.error_msg').innerText = 'Invalid email/username or password'

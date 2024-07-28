@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
+import axios from 'axios'
 function Home() {
+  const [user, setUser] = useState({})
   useEffect(()=>{
   if(window.innerWidth < 768){
     import ('./HomeMobile.css')
