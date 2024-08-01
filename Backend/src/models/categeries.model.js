@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 const categeriesSchema = new mongoose.Schema({
     name:{
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     subcategeries: [
         {
@@ -15,4 +16,5 @@ const categeriesSchema = new mongoose.Schema({
     ]
     })
 
-const Categery = mongoose.model("Categery", categeriesSchema);
+const Category = mongoose.model("Category", categeriesSchema);
+export default Category;
