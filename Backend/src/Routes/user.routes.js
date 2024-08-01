@@ -7,6 +7,7 @@ const upload = multer()
 const userRouter = Router()
 
 userRouter.route('/register').post(upload.none(),registerUser)
+
 userRouter.route('/login').post(upload.none(),loginUser)
 
 export default userRouter
