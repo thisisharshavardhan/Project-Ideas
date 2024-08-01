@@ -1,4 +1,4 @@
-import { asyncHandler } from "../utils/asyncHandler";
+import { asyncHandler } from "../utils/asyncHandler.js";
 
 const getCategories = asyncHandler(async (req, res) => {
     const categories = [
@@ -10,4 +10,4 @@ const getCategories = asyncHandler(async (req, res) => {
     ];
     res.json({ categories });
 })
-export default getCategories ;
+export { getCategories } ;
