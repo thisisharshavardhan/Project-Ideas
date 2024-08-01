@@ -39,6 +39,7 @@ function Login() {
         })
         .catch(err => {
             document.querySelector('.error_msg').innerText = 'Invalid email/username or password'
+            console.log(err)
         })
     }
 
