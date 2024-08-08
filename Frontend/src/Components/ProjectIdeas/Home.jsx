@@ -39,7 +39,7 @@ function Home() {
         <select name="categories" id="categories" className='select_category'>
           <option value='All'>All</option>
           {
-            categories?.data?.map((category,index) => {
+            categories?.data?.map((category, index) => {
               return (
                 <option key={index} value={category.name}>{category.name}</option>
               )
@@ -70,19 +70,58 @@ function Home() {
           <button className='scroll_right' onClick={() => { scroll_categories() }}> &gt;&gt; </button>
         </div>
       </nav>
+      <div className='pr-in'>
+        <span>Projects in </span>
+        <span className='category-span'>Category</span>
+        <span> / </span>
+        <span className='subcategory-span'>SubCategory</span>
+      </div>
       <main>
-        <div className='project_card'>
-          <img className='project_image' src='https://images.unsplash.com/photo-1721332154191-ba5f1534266e?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt='Project Image' />
-          <h2 className='project_title'>Project Title</h2>
-          <p className='project_description'>Project Description</p>
-          <div className='project_tags'>
-            <span className='project_tag'>Tag 1</span>
-            <span className='project_tag'>Tag 2</span>
-            <span className='project_tag'>Tag 3</span>
+
+        <div className="pi-card">
+          <div className="pi-title">
+            <h3>Hostel Management System</h3>
           </div>
-          <div className='project_footer'>
-            <span className='project_category'>Category</span>
-            <span className='project_creator'>Creator</span>
+          <div className='pi-discription'>
+            <p>
+              Hostel Management System is a web-based application developed in PHP, MySQL, HTML, and CSS. This project is a simple project and useful for those who want to learn web development. The project is developed using PHP, MySQL, HTML, and CSS. The project is a simple project and useful for those who want to learn web development. The project is developed using PHP, MySQL, HTML, and CSS.
+            </p>
+          </div>
+        </div>
+        <div className="pi-card">
+          <div className="pi-title">
+            <h3>
+              Learning Mangement System
+            </h3>
+          </div>
+          <div className='pi-discription'>
+            <p>
+              Learning Management System is a web-based application developed in PHP, MySQL, HTML, and CSS. This project is a simple project and useful for those who want to learn web development. The project is developed using PHP, MySQL, HTML, and CSS. The project is a simple project and useful for those who want to learn web development. The project is developed using PHP, MySQL, HTML, and CSS.
+            </p>
+          </div>
+        </div>
+        <div className="pi-card">
+          <div className="pi-title">
+            <h3>
+              Online Examination System
+            </h3>
+          </div>
+          <div className='pi-discription'>
+            <p>
+              Online Examination System is a web-based application developed in PHP, MySQL, HTML, and CSS. This project is a simple project and useful for those who want to learn web development. The project is developed using PHP, MySQL, HTML, and CSS. The project is a simple project and useful for those who want to learn web development. The project is developed using PHP, MySQL, HTML, and CSS.
+            </p>
+          </div>
+        </div>
+        <div className="pi-card">
+          <div className="pi-title">
+            <h3>
+              Online Shopping System
+            </h3>
+          </div>
+          <div className='pi-discription'>
+            <p>
+              Online Shopping System is a web-based application developed in PHP, MySQL, HTML, and CSS. This project is a simple project and useful for those who want to learn web development. The project is developed using PHP, MySQL, HTML, and CSS. The project is a simple project and useful for those who want to learn web development. The project is developed using PHP, MySQL, HTML, and CSS.
+            </p>
           </div>
         </div>
       </main>

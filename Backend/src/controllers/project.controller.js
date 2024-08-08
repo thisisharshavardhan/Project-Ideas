@@ -4,7 +4,7 @@ import {ApiResponse} from "../utils/APIresponse.js";
 import Category from "../models/categeries.model.js";
 const getCategories = asyncHandler(async (req, res) => {
     //fetching all categories
-    const categorys = await Category.find({}).select("-_id -__v -subcategeries");
+    const categorys = await Category.find({}).select("-_id -__v -subcategeries ");
     res.send(new ApiResponse(200, categorys)).status(200);
 })
 
