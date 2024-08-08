@@ -9,10 +9,14 @@ const projectIdeasSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    tags: {
-        type: Array,
+    subcategory: {
+        type: mongoose.Types.Schema.ObjectId,
+        ref: "Subcategory",
         required: true
     },
+},
+{
+    timestamps: true
 });
 
-const ProjectIdea = mongoose.model("ProjectIdea", projectIdeasSchema);
+export const ProjectIdea = mongoose.model("ProjectIdea", projectIdeasSchema);
